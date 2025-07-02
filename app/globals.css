@@ -14,7 +14,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #fff;
     --foreground: #ededed;
   }
 }
@@ -22,5 +22,198 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Lato, sans-serif;
 }
+/* Add this in your global CSS file (e.g., styles/globals.css or a component CSS module) */
+.badge::before {
+ content: "\e921";
+    color: #336aff;
+    width: 60px;
+    height: 60px;
+}
+
+
+        .footer {
+            background-color: #000000;
+            color: #ffffff;
+            padding: 40px 0 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: space-around;
+            gap: 40px;
+            margin-bottom: 36px;
+            flex-wrap: wrap;
+
+        }
+
+        .footer-links a {
+            color: #ffffff;
+            text-decoration: underline;
+            font-size: 18px;
+            font-weight: 400;
+            transition: opacity 0.3s ease;
+        }
+
+      
+        .copyright {
+            text-align: center;
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 30px;
+        }
+        .social-links {
+            display: flex;
+            gap: 18px;
+            justify-content: center;
+            align-items: center;
+           
+        }
+
+        .social-link {
+            display: flex ;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.3s ease;
+             width: 45px;
+            height: 45px;
+            border-radius: 4px;
+            background: #e0e0e4;
+        }
+    
+        .windows-activation {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #ffffff;
+            padding: 15px 20px;
+            border-radius: 0;
+            font-size: 13px;
+            text-align: left;
+        }
+
+        .windows-activation h4 {
+            margin-bottom: 3px;
+            font-size: 14px;
+            font-weight: normal;
+        }
+
+        .windows-activation p {
+            font-size: 13px;
+            color: #cccccc;
+        }
+
+        /* Social Icons using CSS */
+        .linkedin-icon {
+            background-color: #666666;
+            width: 32px;
+            height: 32px;
+            border-radius: 4px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .linkedin-icon::before {
+            content: "in";
+            color: white;
+            font-weight: bold;
+            font-size: 12px;
+            font-family: Arial, sans-serif;
+        }
+
+        .facebook-icon {
+            background-color: #666666;
+            width: 32px;
+            height: 32px;
+            border-radius: 4px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .facebook-icon::before {
+            content: "f";
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+            font-family: Arial, sans-serif;
+        }
+
+        .twitter-icon {
+            background-color: #666666;
+            width: 32px;
+            height: 32px;
+            border-radius: 4px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .twitter-icon::before {
+            content: "t";
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+            font-family: Arial, sans-serif;
+        }
+
+        .wechat-icon {
+            background-color: #666666;
+            width: 32px;
+            height: 32px;
+            border-radius: 4px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .wechat-icon::before {
+            content: "💬";
+            font-size: 14px;
+        }
+
+        .weibo-icon {
+            background-color: #666666;
+            width: 32px;
+            height: 32px;
+            border-radius: 4px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .weibo-icon::before {
+            content: "微";
+            color: white;
+            font-weight: bold;
+            font-size: 12px;
+        }
+
+        @media (max-width: 768px) {
+            .footer-links {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+
+            .social-section {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+
+            .social-links {
+                justify-content: center;
+            }
+        }

@@ -1,5 +1,8 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Footer from "../app/components/footer/page"
+import Navbar from "../app/components/navbar/page";
+import { Toaster } from "react-hot-toast";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -10,6 +13,7 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
 
 export const metadata = {
   title: "Create Next App",
@@ -22,7 +26,27 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+         <Toaster
+          position="top-right"
+          toastOptions={{
+            duration: 3000,
+            success: {
+              style: {
+                background: "green",
+                color: 'white'
+              },
+            },
+            error: {
+              style: {
+                background: "red",
+                color: 'white'
+              },
+            },
+          }}
+        />
+        <Navbar />
         {children}
+      <Footer/>
       </body>
     </html>
   );
